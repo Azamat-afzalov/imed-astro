@@ -1,0 +1,706 @@
+<div class="page-content">
+    <div class="section mt-0 mb-4">
+        <div class="quickLinks-wrap js-quickLinks-wrap-d d-none d-lg-flex">
+            <div class="quickLinks js-quickLinks closed">
+                <div class="container">
+                    <div class="row no-gutters">
+                        <div class="col">
+                            <a href="#" class="link">
+                                <i class="icon-placeholder"></i><span>Расположение</span></a>
+                            <div class="link-drop p-0">
+                                <!-- id="googleMapDrop"  -->
+                                <div class="google-map">
+                                    <iframe 
+                                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1497.3070623460558!2d69.21390785251036!3d41.36074028941661!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5fb0025cadfcf5d7!2zNDHCsDIxJzM4LjciTiA2OcKwMTInNTMuNiJF!5e0!3m2!1sru!2s!4v1659336773974!5m2!1sru!2s"
+                                        width="600" 
+                                        height="450" 
+                                        style="border:0;" 
+                                        allowfullscreen="" 
+                                        loading="lazy" 
+                                        referrerpolicy="no-referrer-when-downgrade"
+                                    ></iframe>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="link">
+                                <i class="icon-clock"></i><span>Рабочее время клиники</span>
+                            </a>
+                            <div class="link-drop">
+                                <h5 class="link-drop-title"><i class="icon-clock"></i>Рабочее время</h5>
+                                <table class="row-table">
+                                    <tr>
+                                        <td><i>пн-пт</i></td>
+                                        <td>08:00 - 20:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i>Суббота</i></td>
+                                        <td>08:00 - 18:00</td>
+                                    </tr>
+                                    <tr>
+                                        <td><i>Воскресенье</i></td>
+                                        <td>Закрыто</td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="link">
+                                <i class="icon-pencil-writing"></i><span>Форма запроса</span>
+                            </a>
+                            <div class="link-drop">
+                                <h5 class="link-drop-title"><i class="icon-pencil-writing"></i>Форма запроса</h5>
+                                <form id="requestForm" method="post" novalidate>
+                                    <div class="successform">
+                                        <p>Ваше сообщение было успешно отправлено!</p>
+                                    </div>
+                                    <div class="errorform">
+                                        <p>Что-то пошло не так, попробуйте обновить и отправить форму еще раз.</p>
+                                    </div>
+                                    <div class="input-group">
+                                            <span>
+                                            <i class="icon-user"></i>
+                                        </span>
+                                        <input name="requestname" type="text" class="form-control" placeholder="Your Name"/>
+                                    </div>
+                                    <div class="row row-sm-space mt-1">
+                                        <div class="col">
+                                            <div class="input-group">
+                                                    <span>
+                                                    <i class="icon-email2"></i>
+                                                </span>
+                                                <input name="requestemail" type="text" class="form-control" placeholder="Your Email"/>
+                                            </div>
+                                        </div>
+                                        <div class="col">
+                                            <div class="input-group">
+                                                    <span>
+                                                    <i class="icon-smartphone"></i>
+                                                </span>
+                                                <input name="requestphone" type="text" class="form-control" placeholder="Your Phone"/>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="selectWrapper input-group mt-1">
+                                            <span>
+                                            <i class="icon-tooth"></i>
+                                        </span>
+                                        <select name="requestservice" class="form-control">
+                                            <option selected="selected" disabled="disabled">Выберите услугу</option>
+                                            <option value="Cosmetic Dentistry">Косметическая стоматология</option>
+                                            <option value="General Dentistry">Общая стоматология</option>
+                                            <option value="Orthodontics">Ортодонтия</option>
+                                            <option value="Children`s Dentistry">Детская стоматология</option>
+                                            <option value="Dental Implants">Зубные имплантаты</option>
+                                            <option value="Dental Emergency">Стоматологическая неотложная помощь</option>
+                                        </select>
+                                    </div>
+                                    <div class="row row-sm-space mt-1">
+                                        <div class="col-sm-6">
+                                            <div class="input-group flex-nowrap">
+                                                    <span>
+                                                        <i class="icon-calendar2"></i>
+                                                    </span>
+                                                <div class="datepicker-wrap">
+                                                    <input name="requestdate" type="text" class="form-control datetimepicker" placeholder="Дата" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-6 mt-1 mt-sm-0">
+                                            <div class="input-group flex-nowrap">
+                                                    <span>
+                                                        <i class="icon-clock"></i>
+                                                    </span>
+                                                <div class="datepicker-wrap">
+                                                    <input name="requesttime" type="text" class="form-control timepicker" placeholder="Время" readonly>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-right mt-2">
+                                        <button type="submit" class="btn btn-sm btn-hover-fill">Запрос</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <a href="#" class="link">
+                                <i class="icon-calendar"></i><span>График врачей</span>
+                            </a>
+                            <div class="link-drop">
+                                <h5 class="link-drop-title"><i class="icon-calendar"></i>График врачей</h5>
+                                <p>Это просто работает как руководство и помогает вам связаться со стоматологами по вашему выбору. Перед тем, как покинуть помещение, подтвердите доступность врача.</p>
+                                <p class="text-right"><a href="#specialistsSection" class="btn btn-sm btn-hover-fill link-inside">Детали</a></p>
+                            </div>
+                        </div>
+                        <div class="col col-close"><a href="#" class="js-quickLinks-close"><i class="icon-top" data-toggle="tooltip" data-placement="top" title="Close panel"></i></a></div>
+                    </div>
+                </div>
+                <div class="quickLinks-open js-quickLinks-open"><span data-toggle="tooltip" data-placement="left" title="Open panel">+</span></div>
+            </div>
+        </div>
+        <div id="mainSliderWrapper">
+            <div class="loading-content">
+                <div class="inner-circles-loader"></div>
+            </div>
+            <div class="main-slider mb-0 arrows-white arrows-bottom" id="mainSlider" data-slick='{"arrows": false, "dots": true}'>
+                <div class="slide">
+                    <div class="img--holder" data-bg="/public/images/content/slider/sl-01.png"></div>
+                    <div class="slide-content center">
+                        <div class="vert-wrap container">
+                            <div class="vert">
+                                <div class="container">
+                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
+                                        Магнитно-резонансная томография (МРТ) <br/>
+                                        <b> в режиме 24/7.</b></div>
+                                    <div class="slide-btn"><a href="#contactSection" class="btn link-inside" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Оставить заявку</span><i class="icon-right-arrow"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img--holder" data-bg="/public/images/content/slider/sl-02.jpg"></div>
+                    <div class="slide-content center">
+                        <div class="vert-wrap container">
+                            <div class="vert">
+                                <div class="container">
+                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">Мультиспиральная компьютерная томография (МСКТ) 
+                                        <br/>
+                                        <b>в режиме 24/7</b></div>
+                                    <div class="slide-btn"><a href="#contactSection" class="btn link-inside" data-animation="fadeInUp" data-animation-delay="2s">
+                                        <i class="icon-right-arrow"></i><span>Оставить заявку</span><i class="icon-right-arrow"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img--holder" data-bg="/public/images/content/slider/sl-03.jpg"></div>
+                    <div class="slide-content center">
+                        <div class="vert-wrap container">
+                            <div class="vert">
+                                <div class="container">
+                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">Полные лабораторные исследования
+                                    </div>
+                                    <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Высочайшие стандарты обслуживания клиентов</div>
+                                    <div class="slide-btn">
+                                        <a href="#contactSection" class="btn link-inside" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Оставить заявку</span><i class="icon-right-arrow"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="img--holder" data-bg="/public/images/content/slider/sl-04.jpg"></div>
+                    <div class="slide-content center">
+                        <div class="vert-wrap container">
+                            <div class="vert">
+                                <div class="container">
+                                    <div class="slide-txt1" data-animation="fadeInDown" data-animation-delay="1s">
+                                        Ультразвуковые исследования
+                                        <br/><b> на оборудованиях премиум класса</b>
+                                    </div>
+                                    <div class="slide-txt2" data-animation="fadeInUp" data-animation-delay="1.5s">Высочайшие стандарты обслуживания клиентов</div>
+                                    <div class="slide-btn"><a href="#contactSection" class="btn link-inside" data-animation="fadeInUp" data-animation-delay="2s"><i class="icon-right-arrow"></i><span>Оставить заявку</span><i class="icon-right-arrow"></i></a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section mb-4" id="aboutOurSection">
+        <div class="container">
+            <div class="title-wrap text-center">
+                <h2 class="h1">О нашем центре</h2>
+                <div class="h-decor"></div>
+            </div>
+            <div class="single-service-carousel js-single-service-carousel">
+                <div class="single-service">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="text-right pl-0 pl-md-3 pl-lg-6">
+                                <p>Our nurse practitioners and primary care nurses work with your family doctor to help manage and provide advice on many conditions including diabetes, depression and high cholesterol. They can assist you with your overall health, monitoring and managing your chronic health conditions.</p>
+                            </div>
+                        </div>
+                        <div class="col-md col-img">
+                            <img src="/public/images/content/slider/slide-01.jpg" alt="" class="img-fluid"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-service">
+                    <div class="row">
+                        <div class="col-md col-img text-right">
+                            <img src="/public/images/content/slider/slide-02.jpg" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="col-md">
+                            <div class="text-left pr-0 pr-md-3 pr-lg-6">
+                                <p>Our primary care dietitians are health professionals who counsel and support patients to make changes in their eating habits to promote health and prevent chronic illness. Whether you are trying to manage a medical condition, control your weight, feed your family, or read food labels, they can help you.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-service">
+                    <div class="row">
+                        <div class="col-md">
+                            <div class="text-right pl-0 pl-md-3 pl-lg-6">
+                                <p>Our exercise specialists promote and prescribe physical activity to prevent and manage chronic health concerns. They facilitate supervised exercise groups and will work one-on-one with our patients to assess their physical function and instruct on proper exercise technique and appropriate activities based on each patient’s individual needs. Exercise specialists hold at a minimum a bachelor’s degree in Physical Education or Kinesiology.</p>
+                            </div>
+                        </div>
+                        <div class="col-md col-img">
+                            <img src="/public/images/content/slider/slide-03.jpg" alt="" class="img-fluid"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="single-service">
+                    <div class="row">
+                        <div class="col-md col-img text-right">
+                            <img src="/public/images/content/services-carousel-04.jpg" alt="" class="img-fluid"/>
+                        </div>
+                        <div class="col-md">
+                            <div class="text-left pr-0 pr-md-3 pr-lg-6">
+                                <p>We would like your feedback on the care or treatment we give you any time you visit your GP or have contact with the practice. It doesn't take long. Put us to the test and tell us what is working and what we can improve. You can say what you think without giving your name and we will use the information to plan improvements to our services.</p>	
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section mb-2" id="departmentsSection">
+        <div class="container">
+            <div class="title-wrap text-center">
+                <h2 class="h1">Направления нашей клиники</h2>
+                <div class="h-decor"></div>
+            </div>
+            <p class="text-center max-500">Медицинский центр iMedClinic специализируется на различных медицинских услугах для удобства населения:</p>
+            <div class="row mt-lg-4">
+                <div class="col-12">
+                    <div class="department-tabs js-department-tabs d-none d-sm-flex">
+                        <div 
+                            class="department-tab active" 
+                        >
+                            <img src="./public/images/sections/radiology.jpg" class="department-tab-img" alt="radiology" srcset=""/>
+                            <div class="department-tab-text">Радиология</div>
+                        </div>
+                        <div 
+                            class="department-tab"	
+                        >
+                            <img src="./public/images/sections/labaratory.jpg" class="department-tab-img" alt="labaratory" srcset=""/>
+                            <!-- <div class="department-tab-icon"><i class="icon-lab"></i></div> -->
+                            <div class="department-tab-text">Лаборатория</div>
+                        </div>
+                        <div class="department-tab">
+                            <img src="./public/images/sections/neurology.jpg" class="department-tab-img" alt="neurology" srcset=""/>
+                            <div class="department-tab-text">Неврология</div>
+                        </div>
+                        <div class="department-tab">
+                            <img src="./public/images/sections/pediatrics.jpg" class="department-tab-img" alt="pediatrics" srcset=""/>
+                            <!-- <div class="department-tab-icon"><i class="icon-pediatrics"></i></div> -->
+                            <div class="department-tab-text">Педиатрия</div>
+                        </div>
+                        <div class="department-tab">
+                            <img src="./public/images/sections/gynecology.jpg" class="department-tab-img" alt="gynecology" srcset=""/>
+                            <!-- <div class="department-tab-icon"><i class="icon-gynecology"></i></div> -->
+                            <div class="department-tab-text">Гинекология</div>
+                        </div>
+                        <div class="department-tab">
+                            <img src="./public/images/sections/therapy.jpg" class="department-tab-img" alt="therapy" srcset=""/>
+                            <!-- <div class="department-tab-icon"><i class="icon-cardiology"></i></div> -->
+                            <div class="department-tab-text">Терапия</div>
+                        </div>
+                        
+                        <div class="department-tab">
+                            <img src="./public/images/sections/physioterapy.jpg" class="department-tab-img" alt="physioterapy" srcset=""/>
+                            <!-- <div class="department-tab-icon"><i class="icon-medicine"></i></div> -->
+                            <div class="department-tab-text">Физиотерапия</div>
+                        </div>
+                        <div class="department-tab">
+                            <img src="./public/images/sections/otalaringolog.jpg" class="department-tab-img" alt="operational-block" srcset=""/>
+                            <!-- <div class="department-tab-icon"><i class="icon-traumatology"></i></div> -->
+                            <div class="department-tab-text">ЛОР</div>
+                        </div>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row mt-lg-4">
+                <div class="col-12">
+                    <div class="department-carousel js-department-carousel">
+                        <div class="department-item">
+                            <h3 data-title="Radiology" class="text-center"><span>Радиология</span></h3>
+                            <div class="department-tab">
+                                <div class="department-tab-icon"><i class="icon-brain"></i></div>
+                                <div class="department-tab-text">Радиология</div>
+                            </div>
+                            <p>Отделение радиологии состоит из Магнитно-резонансного томографа (МРТ), Мультиспиральной компьютерной томографии (МСКТ) и ультразвуковой диагностики (УЗИ).</p>
+                            <p>Магнитно-резонансная томография сегодня широко используется в медицине. Этот метод лучевой диагностики практически не имеет аналогов, поскольку он основан на эффекте ядерного магнитного резонанса. При помощи МРТ врачи исследуют структуры головного и спинного мозга, позвоночника, суставов, брюшной полости, репродуктивной системы и ряда других органов.</p>
+                            <p>В IMED CLINIC можно пройти МРТ быстро и с полной расшифровкой полученных результатов.А компьютерная томография  – современный метод лучевой диагностики большинства заболеваний. Главные его преимущества – исследование проводится быстро, и при этом сканируются обширные анатомические области. Это универсальная методика для установления нового или уточнения имеющегося диагноза.</p>
+                        
+                        </div>
+                        <div class="department-item">
+                            <h3 data-title="Laboratory" class="text-center"><span>Лаборатория</span></h3>
+                            <div class="department-tab">
+                                <div class="department-tab-icon"><i class="icon-lab"></i></div>
+                                <div class="department-tab-text">Лаборатория</div>
+                            </div>
+                            <p>
+                                Медицинский центр IMED CLINIC располагает современной клинико-диагностической лабораторией, имеющей сертификат контроля качества. Мы имеем возможность проводить широчайший спектр лабораторной диагностики в соответствии с высокими cтандартами.
+                            </p>
+                            <p>
+                                В IMED CLINIC можно сдать любые анализы в день обращения и получить результаты по определенным позициям в этот же день. По Вашей просьбе  мы отправляем результаты по электронной почте. Сдать анализы в нашем центре Вы можете в любой день недели с 8 до 20 часов. Новейшее оборудование обеспечивает высокую скорость и точность выполнения исследований. Обращайтесь!
+                            </p>
+                        </div>
+                        <div class="department-item">
+                            <h3 data-title="Neurology" class="text-center"><span>Неврология</span></h3>
+                            <div class="department-tab">
+                                <div class="department-tab-text">Неврология</div>
+                            </div>
+                            <p>
+                                Кружится голова? Наблюдается потеря внимания? Чувствуется слабость и быстрая утомляемость? Ухудшилась память? Боль в спине и шее не дает возможности нормально жить?
+                            </p>
+                            <p>
+                                Это поводы для обращения к неврологу. Стрессы, плохая экология, пассивный образ жизни или, наоборот, чрезмерная физическая нагрузка – это лишь немногие из возможных причин развития неврозов, тревожных состояний и тяжелых неврологических болезней.
+                            </p>
+                            <p>
+                                В медицинском центре  IMED CLINIC в отделении неврология осуществляются следующие:
+                            </p>
+                            <ul>
+                                <li>Комплексная диагностика неврологических заболеваний</li>
+                                <li>Передовые  и авторские методы лечения</li>
+                                <li>Восстановительное лечение: массаж, рефлексотерапия, физиотерапия</li>
+                                <li>Инъекционное и капельное лечение</li>
+                            </ul>
+                        </div>
+                        <div class="department-item">
+                            <h3 data-title="Cardiology" class="text-center"><span>Педиатрия</span></h3>
+                            <div class="department-tab">
+                                <div class="department-tab-text">Педиатрия</div>
+                            </div>
+                            <p>
+                                Педиатрическое отделение отвечает за здоровье детей и подростков, начиная с новорожденных до детей подросткового возраста когда завершается период роста и развития. 
+                            </p>
+                            <p>
+                                Специалисты отделения уделяют особое внимание диагностике и лечению разнообразных хронических заболеваний, врожденных и наследственных заболеваний, проблем развития поведения и психогенных заболеваний в различных областях, таких как сердце, новорожденные, опухоль крови,наследственный метаболизм эндокринной системы, аллергия дыхательной системы, нервы, инфекция, почки, тяжелобольные пациенты, экстренная медицина и т.д., и проводятвакцинацию и регулярную диагностику для раннего выявления заболеваний и улучшения здоровья детей и подростков в зависимости от их возраста.
+                            </p>
+                        </div>
+                        <div class="department-item">
+                            <h3 data-title="Gynecology" class="text-center"><span>Гинекология</span></h3>
+                            <div class="department-tab">
+                                <div class="department-tab-text">Гинекология</div>
+                            </div>
+                            <span>
+                                Мы предоставляем полный спектр лечения гинекологических заболеваний. Наши специалисты-высококвалифицированные врачи, специалисты в своей области.
+                            </span>
+                            <span>Специализации:</span>
+                            <ul>
+                                <li>гинекологическое обследование</li>
+                                <li>первичный осмотр, онкоцитологический мазок, мазок выделений из влагалища, посев из шейки матки, все современные лабораторные методы обследования, необходимые для индивидуальной точной диагностики Вашего состояния и оценки рисков</li>
+                                <li>кольпоскопия: безопасный, не инвазивный, высокоинформативный метод диагностики заболеваний шейки матки, не имеющий противопоказаний;</li>
+                                <li>гистеросальпингография, обследование, показания для которого: бесплодие, спаечный процесс в малом тазу, подозрение на врожденные пороки развития женских половых органов, подозрение на наличие доброкачественных и злокачественных опухолей в матке и придатках.</li>
+                                <li>диагностика опухолей яичников;</li>
+                                <li>диагностика и лечение эндометриоза;</li>
+                                <li>лечение шейки матки любой степени сложности;</li>
+                                <li>индивидуальный подбор средств контрацепции;</li>
+                                <li>постановка и удаление внутриматочного контрацептива;</li>
+                                <li>удаление папилом;</li>
+                                <li>лечение инфекционных, воспалительных заболеваний, передающихся половым путём;</li>
+                                <li>скрытие и дренирование абсцессов бартолиниевой железы;</li>
+                                <li>коррекция недержания мочи консервативными методами;</li>
+                                <li>выявление проблем нарушения пред- и пост менопаузальных состояний;</li>
+                                <li>восстановление менструального цикла;</li>
+                                <li>сделать все возможное прежде чем обратиться на ЭКО;</li>
+                                <li>подготовка и ведение беременности женщин имеющих заболевания: сахарный диабет 1 и 2 типа, щитовидной железы, почек, сердечно –сосудистой системы, заболевания крови;</li>
+                                <li>консультации семейных пар;</li>
+                            </ul>
+                        </div>
+                        <div class="department-item">
+                            <h3 data-title="Medicine" class="text-center"><span>Терапия</span></h3>
+                            <div class="department-tab">
+                                <div class="department-tab-text">Терапия</div>
+                            </div>
+                            <p>
+                                Терапевт – это первый врач, который встречает Вас в нашем медицинском центре. Именно ему предстоит, на основании первичного знакомства с пациентом, анализа всех его жалоб, изучения всех симптомов, выявить природу заболевания и определить направление для дальнейшей, более точной и глубокой, диагностики и лечения. Это специалист высокой квалификации, настоящий врач-универсал, от профессионализма и опыта которого напрямую зависят точность диагноза и правильность лечения пациента.
+                            </p>
+                            
+                        </div>
+                        <div class="department-item">
+                            <h3 data-title="Traumatology" class="text-center"><span>Физиотерапия</span></h3>
+                            <div class="department-tab">
+                                <div class="department-tab-text">Физиотерапия</div>
+                            </div>
+                            <p>
+                                Использование физиотерапевтических методов постоянно расширяется, и сегодня трудно найти заболевание, при котором физиотерапию невозможно применить с пользой для здоровья. Процедуры можно успешно комбинировать с медикаментозной терапией, усиливая положительное влияние на организм.
+                            </p>
+                            <p>
+                                IMED CLINIC предлагает методы физиотерапии, которые применяются для улучшения функциональных возможностей организма, лечения, оздоровления и профилактики. Процедуры проводятся путем воздействия на организм человека факторами природного или искусственного происхождения, включая тепло, холод, электроток, магнит и ультразвук. Также в качестве реабилитации применяется мануальная терапия в виде различных видов массажа.	
+                            </p>
+                        </div>
+                        <div class="department-item">
+                            <h3 data-title="otalaringolog" class="text-center"><span>Лор</span></h3>
+                            <div class="department-tab">
+                                <div class="department-tab-text">Лор</div>
+                            </div>
+                            <p>
+                                Каждый из нас сталкивался с затяжным насморком, кашлем и болями в горле, которые мешают вести привычный образ жизни. Вы можете даже не знать, что проблема может быть связана с искривлением носовой перегородки, различными видами ринита, полипами или новообразованиями носа и околоносовых пазух. 
+                            </p>
+                            <p>
+                                В медицинском центре IMED CLINIC успешно диагностируют и лечат различную лор-патологию: наружные и средние отиты, заболевания носа и его придаточных пазух, доброкачественные новообразования ЛОР- органов, ангины, хронический тонзиллит, фарингиты, аденоиды и т.п.
+                            </p>
+                            <p>
+                                Особое внимание наши врачи уделяют персонализированному подходу к каждому пациенту, используя в работе современные как терапевтические, так и хирургические методы лечения. 
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="section mt-4" id="servicesSection">
+        <div class="container">
+            <div class="title-wrap text-center">
+                <h2 class="h1">Наши услуги</h2>
+                <div class="h-decor"></div>
+            </div>
+            <div class="row js-service-card-style2-carousel">
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card-style2">
+                        <div class="service-card-icon">
+                            <i class="icon-doctor"></i>
+                        </div>
+                        <h5 class="service-card-name">Первичная медико-санитарная помощь</h5>
+                        <p>Центр iMedClinic предоставляет следующие медицинские услуги:</p>
+                        <ul class="marker-list-md">
+                            <li>Полное семейное здравоохранение</li>
+                            <li>ЭКГ</li>
+                            <li>Рентгеновский снимок</li>
+                            <li>УЗИ</li>
+                            <li>Острая и хроническая помощь</li>
+                            <li>Женский экзамен</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                    <div class="service-card-style2">
+                        <div class="service-card-icon">
+                            <i class="icon-genetics"></i>
+                        </div>
+                        <h5 class="service-card-name">Аллергия и иммунология</h5>
+                        <p>Вы должны чувствовать себя лучше, независимо от времени года. </p>
+                        <ul class="marker-list-md">
+                            <li>Аллергические и иммунологические заболевания</li>
+                            <li>Тестирование на аллергию и иммунологию</li>
+                            <li>Лечение аллергии и иммунологии</li>
+                            <li>Лечение астмы</li>
+                            <li>Дерматология</li>
+                            <li>Детская аллергология и иммунология</li>
+                        </ul>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    
+    <div class="section mt-4" id="specialistsSection">
+        <div class="container">
+            <div class="title-wrap text-center">
+                <h1>Наши специалисты</h1>
+                <div class="h-decor"></div>
+            </div>
+            <p class="text-center max-600">
+                Мы предлагаем высокоспециализированную медицинскую помощь в одном месте от ведущих национальных и международных специалистов в своих областях медицины.
+            </p>
+            <form class="filterCarousel">
+                <div class="selectWrapper input-group">
+                    <select class="form-control">
+                        <option value="all">Все</option>
+                        <option value=".category1">Психиатр</option>
+                        <option value=".category2">Кардиолог</option>
+                    </select>
+                </div>
+            </form>
+            <div class="row specialist-carousel js-specialist-carousel">
+                <div class="col-sm-6 col-md-4 category1">
+                    <div class="doctor-box doctor-box-style2 text-center">
+                        <div class="doctor-box-photo">
+                            <img src="/images/content/doctor-01.jpg" class="img-fluid" alt=""/>
+                        </div>
+                        <div class="doctor-box-top">
+                            <h5 class="doctor-box-name">Dr. William Gardner</h5>
+                            <div class="doctor-box-position">Психиатр</div>
+                        </div>
+                        <ul class="doctor-box-shedule">
+                            <li><span>Пн - Чет</span><span>08:00 - 20:00</span></li>
+                            <li><span>Пятница</span><span>07:00 - 22:00</span></li>
+                            <li><span>Суббота</span><span>08:00 - 18:00</span></li>
+                        </ul>
+                        <div class="doctor-box-booking">
+                            <a href="#" data-toggle="modal" data-target="#modalBookingForm">
+                                Бронирование визита <i class="icon-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 category2">
+                    <div class="doctor-box doctor-box-style2 text-center">
+                        <div class="doctor-box-photo">
+                            <img src="/public/images/content/doctor-02.jpg" class="img-fluid" alt=""/>
+                        </div>
+                        <div class="doctor-box-top">
+                            <h5 class="doctor-box-name">Dr. William Gardner</h5>
+                            <div class="doctor-box-position">Психиатр</div>
+                        </div>
+                        <ul class="doctor-box-shedule">
+                            <li><span>Пн - Чет</span><span>08:00 - 20:00</span></li>
+                            <li><span>Пятница</span><span>07:00 - 22:00</span></li>
+                            <li><span>Суббота</span><span>08:00 - 18:00</span></li>
+                        </ul>
+                        <div class="doctor-box-booking">
+                            <a href="#" data-toggle="modal" data-target="#modalBookingForm">
+                                Бронирование визита <i class="icon-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 category2">
+                    <div class="doctor-box doctor-box-style2 text-center">
+                        <div class="doctor-box-photo">
+                            <img src="/public/images/content/doctor-03.jpg" class="img-fluid" alt=""/>
+                        </div>
+                        <div class="doctor-box-top">
+                            <h5 class="doctor-box-name">Dr. William Gardner</h5>
+                            <div class="doctor-box-position">Психиатр</div>
+                        </div>
+                        <ul class="doctor-box-shedule">
+                            <li><span>Пн - Чет</span><span>08:00 - 20:00</span></li>
+                            <li><span>Пятница</span><span>07:00 - 22:00</span></li>
+                            <li><span>Суббота</span><span>08:00 - 18:00</span></li>
+                        </ul>
+                        <div class="doctor-box-booking">
+                            <a href="#" data-toggle="modal" data-target="#modalBookingForm">
+                                Бронирование визита <i class="icon-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 category1">
+                    <div class="doctor-box doctor-box-style2 text-center">
+                        <div class="doctor-box-photo">
+                            <img src="/public/images/content/doctor-04.jpg" class="img-fluid" alt=""/>
+                        </div>
+                        <div class="doctor-box-top">
+                            <h5 class="doctor-box-name">Dr. William Gardner</h5>
+                            <div class="doctor-box-position">Психиатр</div>
+                        </div>
+                        <ul class="doctor-box-shedule">
+                            <li><span>Пн - Чет</span><span>08:00 - 20:00</span></li>
+                            <li><span>Пятница</span><span>07:00 - 22:00</span></li>
+                            <li><span>Суббота</span><span>08:00 - 18:00</span></li>
+                        </ul>
+                        <div class="doctor-box-booking">
+                            <a href="#" data-toggle="modal" data-target="#modalBookingForm">
+                                Бронирование визита <i class="icon-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 category1">
+                    <div class="doctor-box doctor-box-style2 text-center">
+                        <div class="doctor-box-photo">
+                            <img src="/public/images/content/doctor-05.jpg" class="img-fluid" alt=""/>
+                        </div>
+                        <div class="doctor-box-top">
+                            <h5 class="doctor-box-name">Dr. William Gardner</h5>
+                            <div class="doctor-box-position">Психиатр</div>
+                        </div>
+                        <ul class="doctor-box-shedule">
+                            <li><span>Пн - Чет</span><span>08:00 - 20:00</span></li>
+                            <li><span>Пятница</span><span>07:00 - 22:00</span></li>
+                            <li><span>Суббота</span><span>08:00 - 18:00</span></li>
+                        </ul>
+                        <div class="doctor-box-booking">
+                            <a href="#" data-toggle="modal" data-target="#modalBookingForm">
+                                Бронирование визита <i class="icon-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-md-4 category2">
+                    <div class="doctor-box doctor-box-style2 text-center">
+                        <div class="doctor-box-photo">
+                            <img src="/public/images/content/doctor-06.jpg" class="img-fluid" alt=""/>
+                        </div>
+                        <div class="doctor-box-top">
+                            <h5 class="doctor-box-name">Dr. William Gardner</h5>
+                            <div class="doctor-box-position">Психиатр</div>
+                        </div>
+                        <ul class="doctor-box-shedule">
+                            <li><span>Пн - Чет</span><span>08:00 - 20:00</span></li>
+                            <li><span>Пятница</span><span>07:00 - 22:00</span></li>
+                            <li><span>Суббота</span><span>08:00 - 18:00</span></li>
+                        </ul>
+                        <div class="doctor-box-booking">
+                            <a href="#" data-toggle="modal" data-target="#modalBookingForm">
+                                Бронирование визита <i class="icon-right-arrow"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section" id="contactSection">
+        <div class="banner-contact-us" style="background-image: url(/public/images/content/contact-bg.png)">
+            <div class="container">
+                <div class="row no-gutters">
+                    <div class="col-sm-6 col-lg-6 order-2 order-sm-1 mt-3 mt-md-0 text-center text-md-right d-flex align-items-end">
+                        <img src="/public/images/content/banner-callus.png" alt="" class="shift-left"/>
+                    </div>
+                    <div class="col-sm-6 col-lg-6 order-1 order-sm-2 d-flex">
+                        <div class="pt-2 pt-lg-6">
+                            <h2 data-title="Ищете сертифицированного врача?"><span>Ищете <span class="theme-color">сертифицированного врача?</span></span></h2>
+                            <p>
+                                Мы верим в обеспечение наилучшего ухода для всех наших существующих пациентов и приглашаем новых пациентов на пробу.
+                            </p>
+                            <form class="contact-form" id="contactForm" name="contactForm" method="post" novalidate="novalidate">
+                                <div class="successform">
+                                    <p>Ваше сообщение было успешно отправлено!</p>
+                                </div>
+                                <div class="errorform">
+                                    <p>Что-то пошло не так, попробуйте обновить и отправить форму еще раз.</p>
+                                </div>
+                                <div>
+                                    <input type="text" class="form-control" name="name" placeholder="Имя*">
+                                </div>
+                                <div class="row row-sm-space mt-15">
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="phone" placeholder="Телефон*">
+                                    </div>
+                                    <div class="col-sm-6 mt-15 mt-sm-0">
+                                        <input type="text" class="form-control" name="email" placeholder="Эл. адрес">
+                                    </div>
+                                </div>
+                                <div class="mt-15">
+                                    <textarea class="form-control" name="message" placeholder="Сообщение"></textarea>
+                                </div>
+                                <div class="mt-2 mt-lg-4 text-center text-md-left">
+                                    <button type="submit" class="btn">
+                                        <i class="icon-right-arrow"></i>
+                                        <span>Послать запрос</span>
+                                        <i class="icon-right-arrow"></i>
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
